@@ -37,8 +37,11 @@ class LinkedList:
             then = start.next    
             
     def swap(self):
-        # tien hanh swap lai vi tri
-        #vi du 1->2->3->6->5-4. 1 se duoc lien ket voi 6, 6 se duoc lient ket vs 2. Tiep tuc thay doi vs cac vi tri khac
+        #vi du 1->2->3->6->5-4. Chia liên kết đơn thành 2 nửa 1->2->3, 6->5->4
+        # Đặt 2 con trỏ first = 1, second =2
+        # Tiến hành thay đổi vị tri trong liên kết đơn
+        # Ở lượt 1, 1 sẽ được thay đổi liên kết với 6, 6 sẽ được thay đổi liên kết với 2. Sau đó chung ta thay đổi first = 2, second là 5
+        # Sau lượt 1 liên kết đơn trở thành 1->6->2->3, 5->4. Tiếp tục cho đến khi first hoặc second là None
         
         first = self.head
         temp = self.head
